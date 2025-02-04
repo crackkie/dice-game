@@ -28,9 +28,9 @@ function main(){
     var dice2 = dice('dice2');
         
     if(dice1 > dice2){
-        heading.textContent = 'Dicee1 Win!';
+        heading.textContent = 'Dice 1 Win!';
     }else if(dice1 < dice2){
-        heading.textContent = 'Dicee2 Win!';
+        heading.textContent = 'Dice 2 Win!';
     }
     else{
         heading.textContent = ' Draw!';
