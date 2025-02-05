@@ -153,8 +153,6 @@ async function main(){
         throwBtn.disabled = true;
         }, 5000);
 
-        console.log(totalPlayerDice);
-        console.log(totalDealerDice);
         totalPlayerDice = 0;
         totalDealerDice = 0;
         coinUpdate();
