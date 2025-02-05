@@ -1,0 +1,206 @@
+body{
+    background-color: rgb(1, 75, 42);
+    margin: 0;
+}
+.parent{
+    display: grid;
+    grid-template-areas: 
+    'header '
+    'h1'
+    'container'
+    'container'
+    'container'
+    'container'
+    'betwarp'
+    ;
+}
+header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 1rem;
+    padding: 0 1rem;
+    background-color: #1a1a1a;
+    grid-area: header;
+}
+
+header img{
+    height: 30px;
+    width: 30px;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    grid-area: h1;
+    color: white;
+}
+.coin-header{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.ham-btn{
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+    border: ;
+    border-radius: 50%;
+
+}
+.ham-btn:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #2d2d2d;
+}
+.ham-menu{
+    display: none;
+    width: 100%;
+    height: 35px;
+
+}
+.active{
+    display: flex;
+    background-color: #eaeaea;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.ham-menu input{
+    border-radius: 8px;
+    width: 40%;
+    height: 18px;
+    text-align: center;
+}
+.btn-redeem{
+    border-radius: 8px;
+    border: none;
+    background-color: #2d2d2d;
+    color: white;
+    padding: .3rem .5rem;
+}
+
+.coin-count{
+    font-size: 1.5rem;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    grid-area: container;
+}
+.bet-wrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    grid-area: betwarp;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+    /* border: 2px solid; */
+}
+.dice1 , .dice2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    padding: .5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 12px;
+}
+.btn:hover{
+    background-color: #1a1a1a;
+    cursor: pointer;
+    color : white
+}
+.bet-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.btn-bet{
+    height: 30px;
+    width: 30px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.5rem;
+}
+.btn-bet:hover{
+    background-color: #1a1a1a;
+    cursor: pointer;
+    color : white
+}
+.bet-count{
+    color: white;
+    font-size: 2rem;
+}
+.btn-row{
+    padding: .5rem 1rem;
+    border-radius: 8px;
+}
+.btn-row:hover{
+    background-color: #1a1a1a;
+    color : white;
+    cursor: pointer;
+}
+.table{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    z-index: -11;
+}
+.table img{
+    width: 100%;
+    height: 100%;
+    background-size: cover ;
+    background-position: center ;
+    background: ;
+}
+
+img{
+    height: 50px;
+}
+@media  (max-width: 480px) {
+   img{
+    height: 30px;
+   }
+   .player, .dealer {
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .table{
+    height: 58vh;
+   }
+   .bet-wrap{
+    margin-bottom: 8rem;
+
+   }
+}

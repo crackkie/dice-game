@@ -4,27 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Click Button to Start</h1>
-        <div class="dice-container">
-            <div class="dice1">
-                <h2>Dice 1</h2>
-                <img class="img" id="dice1" src="./images/dice1.png" alt="">
-            </div>
-            <div class="dice2">
-                <h2>Dice 2</h2>
-                <img class="img" id="dice2" src="./images/dice1.png" alt="">
-            </div>
+<div class="parent">
+    <header>
+        <div class="coin-header">
+            <img src="./asets/HARAM_COIN.svg" class="coin" alt="">
+            <span class="coin-count" id="coin-count">0</span>
         </div>
-        <button class="btn" onclick="main()">Main</button>
- 
-
+        <div class="ham-btn" id="ham-btn">
+            <button class="ham-btn" id="ham-btn">+</button>
+        </div>
+    </header>
+    <span class="alert" id="alert"></span>
+    <div class="ham-menu" id="ham-menu">
+            <input id="unix-code" type="text" placeholder="Reedem Code">
+            <button id="btn-redeem" class="btn-redeem" onclick="">Submit</button>
+            <p>Creator By <a href="https://github.com/crackkie" target="_blank">git.Crackkie</a></p>
+            <p>Bug ? <a href="https://www.instagram.com/ahmdr14_/" target="_blank">Report</a></p>
     </div>
+    
+    <main>
+        <h1 class="title">Welcome</h1>
+        <div class="container">
+            <div class="table">
+                <img src="./asets/TABLE.svg" alt="">
+            </div>
+            <div class="dealer">
+                <div class="dice-container">
+                    <div class="dice1">
+                        <img class="img" id="dealer_dice1" src="" alt="">
+                    </div>
+                    <div class="dice2">
+                        <img class="img" id="dealer_dice2" src="" alt="">
+                    </div>
+                </div>
+                <h2>Dealer dice</h2>
+            </div>
+            <span id="bet-display"></span>
+            <div class="player">
+                <h2>Player dice</h2>
+                <div class="dice-container">
+                    <div class="dice1">
+                        <img class="img" id="player_dice1" src="" alt="">
+                    </div>
+                    <div class="dice2">
+                        <img class="img" id="player_dice2" src="" alt="">
+                    </div>
+                </div>
+            </div>
+     
+        </div>
 
+        <div class="bet-wrap">
+            <h2>Total Bet : <span id="totalBet">0</span></h2>
+            <div class="bet-container">
+                <button class="btn-bet" id="btn-bet-" onclick="betCount(-10)">-</button>
+                <span class="bet-count" id="bet-count">0</span>
+                <button class="btn-bet" id="btn-bet+" onclick="betCount(+10)">+</button>
+            </div>
+            <div class="bet-button">
+                <button id="bet" class="btn-row" onclick="main()" >BET</button>
+                <button id="btn-double" class="btn-row" onclick="doubleBet()">x2</button>                
+            </div>
+    
+            <button id="btn-trow" class="btn" >Throw</button>
+        </div>
+    </main>
+</div>
 
-    <script src="script.js"></script>
+    <script src="./JS/script.js "></script>
 </body>
 </html>
